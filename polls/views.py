@@ -1,10 +1,10 @@
 from django.shortcuts import render
 
 
-# Create your views here.
+# Index view
 def index(request):
     return render(request, "polls/index.html")
 
-
-def contact(request):
-    return render(request, "polls/contact.html")
+# Registration view
+def registration(request):
+    return render(request, "polls/registration.html")
