@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My HTML Document</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Party List | Django</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
   </head>
-  <div class="d-inline p-2 bg-primary text-white">
-    {% include 'polls/base/header.html' %}
-  </div>
-
   <body>
-
-    <div class="d-inline p-2 bg-dark text-white">
-      {% include 'polls/forms/registration.html' %}
+    {% comment %} <div class="d-inline p-2 bg-primary text-white">
+    </div> {% endcomment %}
+    {% include 'polls/base/header.html' %}
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-6">
+          {% include 'polls/forms/registration.html' %}
+        </div>
+      </div>
     </div>
-
-
-  </body>
-
-  <div class="d-inline p-2 bg-dark text-white">
+    {% comment %} <div class="d-inline p-2 bg-dark text-white">
+    </div> {% endcomment %}
+    {% comment %} <div class="d-inline p-2 bg-dark text-white">
+    </div> {% endcomment %}
     {% include 'polls/base/footer.html' %}
-  </div>
-
+  </body>
 </html>
