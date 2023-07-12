@@ -15,6 +15,11 @@ def registration(request):
 
         guest = Guest(firstname=firstname, lastname=lastname, grade=grade, email=email)
         guest.save()
+        print(f'\n------- DataBase Successfully Registered -------\n')
+        print(f'Firstname: {firstname}')
+        print(f'Lastname: {lastname}')
+        print(f'Grade: {grade}')
+        print(f'Email: {email}')
 
         #return render(request, 'success.html')  # Redirect to a success page after saving
         return render(request, "polls/registration.html")
