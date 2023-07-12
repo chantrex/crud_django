@@ -7,11 +7,12 @@
     Someone famous in <cite title="Clone Twitter? o.O">Threads</cite>
   </figcaption>
 </figure>
-<form action="">
+
+<form method="POST" action="{% url 'guest_registration' %}">
   {% csrf_token %}
-  <input class="form-control form-control mt-2" type="text" placeholder="Firstname"/>
-  <input class="form-control mt-2" type="text" placeholder="Lastname"/>
-  <input class="form-control form-control-sm mt-2" type="number" placeholder="Grade"/>
-  <input class="form-control form-control-sm mt-2" type="text" placeholder="email@email.com"/>
+  <input class="form-control form-control mt-2" type="text" placeholder="Firstname" name="firstnameHtml"/>
+  <input class="form-control mt-2" type="text" placeholder="Lastname" name="lastnameHtml"/>
+  <input class="form-control form-control-sm mt-2" type="number" placeholder="Grade" name="gradeHtml"/>
+  <input class="form-control form-control-sm mt-2" type="email" placeholder="email@email.com" name="emailHtml"/>
   <input class="btn btn-primary mt-3" type="submit" value="Register Guest">
 </form>
