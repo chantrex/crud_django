@@ -7,6 +7,8 @@ def index(request):
 
 # Registration view
 def registration(request):
+    success = 'Guest Added SUCCESSFULLY!'
+
     if request.method == 'POST':
         firstname = request.POST['firstnameHtml']
         lastname = request.POST['lastnameHtml']
@@ -22,6 +24,6 @@ def registration(request):
         print(f'Email: {email}')
 
         #return render(request, 'success.html')  # Redirect to a success page after saving
-        return render(request, "polls/registration.html")
-    return render(request, "polls/index.html")
+        return render(request, "polls/index.html", {'success': success})
+    return render(request, "polls/registration.html")
 
