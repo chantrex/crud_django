@@ -2,6 +2,10 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-  <p>-- {{ success }} --</p>
+  {% if success == 'Guest Added SUCCESSFULLY!' %}
+    <p>-- {{ success }} --</p>
+  {% else %}
+    
+  {% endif %}
   <h1>Home Page</h1>
 {% endblock content %}
